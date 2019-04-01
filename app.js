@@ -16,6 +16,9 @@ app.use('/', index);
 app.use('/auth', auth);
 app.use('/hidden', hidden);
 
+const bcrypt = require('bcrypt')
+const saltRounds = 10
+
 app.listen(port, () => {
   console.log('Listening on port', port);
 })
